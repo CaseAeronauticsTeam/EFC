@@ -8,22 +8,8 @@
 *
 */
 
-#include "application.hpp"
+static void start(void);
 
+static void init(void);
 
-static void start(void)
-{
-	init();
-	main();
-}
-
-
-static void init(void)
-{
-
-}
-
-static void main(void)
-{
-
-}
+static void main(void);
