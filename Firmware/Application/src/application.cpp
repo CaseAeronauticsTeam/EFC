@@ -23,7 +23,7 @@ static void init(void)
 
 }
 
-static void main(void)
+static void launch(void)
 {
 
 }
