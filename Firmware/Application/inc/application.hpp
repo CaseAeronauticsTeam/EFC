@@ -8,8 +8,8 @@
 *
 */
 
-static void start(void);
+void start(void);
 
-static void init(void);
+void init(void);
 
-static void launch(void);
+void launch(void);

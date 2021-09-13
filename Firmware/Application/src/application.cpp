@@ -11,19 +11,22 @@
 #include "application.hpp"
 
 
-static void start(void)
+void start(void)
 {
 	init();
-	main();
+	launch();
 }
 
 
-static void init(void)
+void init(void)
 {
 
 }
 
-static void launch(void)
+void launch(void)
 {
+	while (1)
+	{
 
+	}
 }

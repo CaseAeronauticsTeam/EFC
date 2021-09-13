@@ -37,12 +37,22 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
+			<name>Lib</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>Application/inc</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
 			<name>Application/src</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>Lib/Drivers</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -56,11 +66,30 @@
 			<type>1</type>
 			<locationURI>APP_LOC/src/application.cpp</locationURI>
 		</link>
+		<link>
+			<name>Lib/Drivers/BBServo</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>Lib/Drivers/BBServo/BBServo.cpp</name>
+			<type>1</type>
+			<locationURI>LIB_LOC/Drivers/BBServo/BBServo.cpp</locationURI>
+		</link>
+		<link>
+			<name>Lib/Drivers/BBServo/BBServo.hpp</name>
+			<type>1</type>
+			<locationURI>LIB_LOC/Drivers/BBServo/BBServo.hpp</locationURI>
+		</link>
 	</linkedResources>
 	<variableList>
 		<variable>
 			<name>APP_LOC</name>
 			<value>file:/C:/Projects/CaseAeronauticsTeam/EFC/Firmware/Application</value>
+		</variable>
+		<variable>
+			<name>LIB_LOC</name>
+			<value>$%7BPARENT-3-PROJECT_LOC%7D/CatLib</value>
 		</variable>
 	</variableList>
 </projectDescription>
