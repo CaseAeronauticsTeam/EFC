@@ -9,13 +9,17 @@
 */
 #pragma once
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-//namespace APP {
+void start();
 
-	void start(void);
+void init();
 
-	static void init(void);
+void launch();
 
-	static void launch(void);
 
-//}
+#ifdef __cplusplus
+}
+#endif

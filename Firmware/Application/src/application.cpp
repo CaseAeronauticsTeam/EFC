@@ -12,19 +12,19 @@
 #include "TimServo.hpp"
 
 
-void start(void)
+void start()
 {
 	init();
 	launch();
 }
 
 
-static void init(void)
+void init()
 {
 
 }
 
-static void launch(void)
+void launch()
 {
 	while (1)
 	{

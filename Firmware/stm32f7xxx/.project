@@ -22,13 +22,13 @@
 		<nature>com.st.stm32cube.ide.mcu.MCUProjectNature</nature>
 		<nature>com.st.stm32cube.ide.mcu.MCUCubeProjectNature</nature>
 		<nature>org.eclipse.cdt.core.cnature</nature>
-		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>com.st.stm32cube.ide.mcu.MCUCubeIdeServicesRevAev2ProjectNature</nature>
 		<nature>com.st.stm32cube.ide.mcu.MCUAdvancedStructureProjectNature</nature>
 		<nature>com.st.stm32cube.ide.mcu.MCUSingleCpuProjectNature</nature>
 		<nature>com.st.stm32cube.ide.mcu.MCURootProjectNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
 	</natures>
 	<linkedResources>
 		<link>
@@ -67,34 +67,34 @@
 			<locationURI>APP_LOC/src/application.cpp</locationURI>
 		</link>
 		<link>
-			<name>Lib/Drivers/BBServo</name>
+			<name>Lib/Drivers/inc</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>Lib/Drivers/TimServo</name>
+			<name>Lib/Drivers/src</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>Lib/Drivers/BBServo/BBServo.cpp</name>
+			<name>Lib/Drivers/inc/BBServo.hpp</name>
 			<type>1</type>
-			<locationURI>LIB_LOC/Drivers/BBServo/BBServo.cpp</locationURI>
+			<locationURI>LIB_LOC/Drivers/inc/BBServo.hpp</locationURI>
 		</link>
 		<link>
-			<name>Lib/Drivers/BBServo/BBServo.hpp</name>
+			<name>Lib/Drivers/inc/TimServo.hpp</name>
 			<type>1</type>
-			<locationURI>LIB_LOC/Drivers/BBServo/BBServo.hpp</locationURI>
+			<locationURI>LIB_LOC/Drivers/inc/TimServo.hpp</locationURI>
 		</link>
 		<link>
-			<name>Lib/Drivers/TimServo/TimServo.cpp</name>
+			<name>Lib/Drivers/src/BBServo.cpp</name>
 			<type>1</type>
-			<locationURI>LIB_LOC/Drivers/TimServo/TimServo.cpp</locationURI>
+			<locationURI>LIB_LOC/Drivers/src/BBServo.cpp</locationURI>
 		</link>
 		<link>
-			<name>Lib/Drivers/TimServo/TimServo.hpp</name>
+			<name>Lib/Drivers/src/TimServo.cpp</name>
 			<type>1</type>
-			<locationURI>LIB_LOC/Drivers/TimServo/TimServo.hpp</locationURI>
+			<locationURI>LIB_LOC/Drivers/src/TimServo.cpp</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>
