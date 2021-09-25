@@ -72,6 +72,11 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
+			<name>Lib/Drivers/TimServo</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>Lib/Drivers/BBServo/BBServo.cpp</name>
 			<type>1</type>
 			<locationURI>LIB_LOC/Drivers/BBServo/BBServo.cpp</locationURI>
@@ -81,11 +86,21 @@
 			<type>1</type>
 			<locationURI>LIB_LOC/Drivers/BBServo/BBServo.hpp</locationURI>
 		</link>
+		<link>
+			<name>Lib/Drivers/TimServo/TimServo.cpp</name>
+			<type>1</type>
+			<locationURI>LIB_LOC/Drivers/TimServo/TimServo.cpp</locationURI>
+		</link>
+		<link>
+			<name>Lib/Drivers/TimServo/TimServo.hpp</name>
+			<type>1</type>
+			<locationURI>LIB_LOC/Drivers/TimServo/TimServo.hpp</locationURI>
+		</link>
 	</linkedResources>
 	<variableList>
 		<variable>
 			<name>APP_LOC</name>
-			<value>file:/C:/Projects/CaseAeronauticsTeam/EFC/Firmware/Application</value>
+			<value>$%7BPARENT-1-PROJECT_LOC%7D/Application</value>
 		</variable>
 		<variable>
 			<name>LIB_LOC</name>

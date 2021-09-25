@@ -53,10 +53,8 @@
 									<listOptionValue builtIn="false" value="../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F7xx/Include"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/EFC/Application/inc}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../${APP_LOC}&quot;"/>
-									<listOptionValue builtIn="false" value="../../Application/inc"/>
 									<listOptionValue builtIn="false" value="../../../../CatLib"/>
+									<listOptionValue builtIn="false" value="../../Application/inc"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.699194171" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -72,12 +70,11 @@
 									<listOptionValue builtIn="false" value="../Core/Inc"/>
 									<listOptionValue builtIn="false" value="../Drivers/STM32F7xx_HAL_Driver/Inc"/>
 									<listOptionValue builtIn="false" value="../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy"/>
-									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F7xx/Include"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/EFC/Application/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../${APP_LOC}&quot;"/>
 									<listOptionValue builtIn="false" value="../../Application/inc"/>
 									<listOptionValue builtIn="false" value="../../../../CatLib"/>
+									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F7xx/Include"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.818878940" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
@@ -157,11 +154,8 @@
 									<listOptionValue builtIn="false" value="../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F7xx/Include"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
-									<listOptionValue builtIn="false" value="&quot;C:\Projects\CaseAeronauticsTeam\EFC\Firmware\Application\inc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/EFC/Application/inc}&quot;"/>
-									<listOptionValue builtIn="false" value="../{$APP_LOC}"/>
-									<listOptionValue builtIn="false" value="../../Application/inc"/>
 									<listOptionValue builtIn="false" value="../../../../CatLib/"/>
+									<listOptionValue builtIn="false" value="../../Application/inc"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1414928828" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -176,13 +170,12 @@
 									<listOptionValue builtIn="false" value="../Core/Inc"/>
 									<listOptionValue builtIn="false" value="../Drivers/STM32F7xx_HAL_Driver/Inc"/>
 									<listOptionValue builtIn="false" value="../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy"/>
-									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F7xx/Include"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="&quot;C:\Projects\CaseAeronauticsTeam\EFC\Firmware\Application\inc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/EFC/Application/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="../{$APP_LOC}"/>
 									<listOptionValue builtIn="false" value="../../Application/inc"/>
 									<listOptionValue builtIn="false" value="../../../../CatLib/"/>
+									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F7xx/Include"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.795686282" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
