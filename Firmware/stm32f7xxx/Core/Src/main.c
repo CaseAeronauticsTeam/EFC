@@ -98,6 +98,7 @@ int main(void)
   MX_USB_OTG_FS_PCD_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+  start();
 
   /* USER CODE END 2 */
 

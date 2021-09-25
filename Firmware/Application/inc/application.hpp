@@ -7,9 +7,15 @@
 * 	     Controller system
 *
 */
+#pragma once
 
-void start(void);
 
-void init(void);
+//namespace APP {
 
-void launch(void);
+	void start(void);
+
+	static void init(void);
+
+	static void launch(void);
+
+//}

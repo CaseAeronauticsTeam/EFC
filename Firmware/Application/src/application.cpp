@@ -9,6 +9,7 @@
 */
 
 #include "application.hpp"
+#include "TimServo.hpp"
 
 
 void start(void)
@@ -18,12 +19,12 @@ void start(void)
 }
 
 
-void init(void)
+static void init(void)
 {
 
 }
 
-void launch(void)
+static void launch(void)
 {
 	while (1)
 	{
