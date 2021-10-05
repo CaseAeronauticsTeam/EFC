@@ -8,16 +8,19 @@
 *
 */
 #pragma once
+#include <stm32f7xx.h>
+
 
 #ifdef __cplusplus
 extern "C" {
 #endif
+//#include "TimServo.hpp"
 
-void start();
+void start(TIM_HandleTypeDef* _tim, ADC_HandleTypeDef* _adc);
 
 void init();
 
-void launch();
+void launch(TIM_HandleTypeDef* _tim, ADC_HandleTypeDef* _adc);
 
 
 #ifdef __cplusplus
