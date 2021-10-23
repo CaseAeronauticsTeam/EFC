@@ -12,25 +12,32 @@
 #include "TimServo.hpp"
 
 
+
+static TimServo leftAileron = TimServo();
+static TimServo rightAileron = TimServo();
+
+
 void start(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler, ADC_HandleTypeDef* _adc)
 {
 	init();
 	launch(_tim, _timHandler, _adc);
+
 }
 
 
 void init()
 {
-
+	leftAileron.init(_tim, _timHandler, 1, 180);
+	rightAileron.init(_tim, _timHandler, 2, 130);
 }
 
 void launch(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler, ADC_HandleTypeDef* _adc)
 {
-	TimServo servo = TimServo();
-	servo.init(_tim, _timHandler, 1, 180);
 
-	double theta = 0;
+	double thetaL = 0;
+	double thetaR = 0;
 	uint16_t raw;
+
 
 	while (1)
 	{
@@ -38,9 +45,21 @@ void launch(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler, ADC_HandleTypeDef
 		HAL_ADC_PollForConversion(_adc, HAL_MAX_DELAY);
 		raw = HAL_ADC_GetValue(_adc);
 
-		theta = (((double)raw - (double)((1 << 11) - 1)) / (double)((1 << 11) - 1)) * 90.;
+		if (!HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
+		{
+			// Assign Left Aileron Servo to ADC
+			thetaL = (((double)raw - (double)((1 << 11) - 1)) / (double)((1 << 11) - 1)) * 90.;
+			leftAileron.setAngle(thetaL);
 
-		servo.setAngle(theta);
+			// Cycle Right Aileron Servo slowly
+			thetaR = thetaR < 80 ? (thetaR + .0002) : -90;
+			rightAileron.setAngle(thetaR);
+		}
+		else  // "Kill"
+		{
+			leftAileron.setAngle(0);
+			rightAileron.setAngle(0);
+		}
 
 	}
 
