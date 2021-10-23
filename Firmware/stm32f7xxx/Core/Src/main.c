@@ -106,7 +106,7 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   //start(&htim1, &hadc1);
-  start(TIM1, &htim1, &hadc1);
+  start(TIM1, TIM2, &htim1, &hadc1);
 
   /* USER CODE END 2 */
 
