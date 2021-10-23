@@ -1,5 +1,5 @@
 /**
-* @file application.cpp
+* @file application.hpp
 * @author Mitchel Walker
 * @date 9/3/2021
 *
@@ -10,7 +10,6 @@
 #pragma once
 
 
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -18,11 +17,11 @@ extern "C" {
 #include <stm32f7xx.h>
 
 
-void start(TIM_HandleTypeDef* _tim, ADC_HandleTypeDef* _adc);
+void start(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler, ADC_HandleTypeDef* _adc);
 
-void init();
+void init(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler);
 
-void launch(TIM_HandleTypeDef* _tim, ADC_HandleTypeDef* _adc);
+void launch(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler, ADC_HandleTypeDef* _adc);
 
 
 #ifdef __cplusplus
