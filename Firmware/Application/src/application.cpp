@@ -16,22 +16,26 @@
 static TimServo leftAileron = TimServo();
 static TimServo rightAileron = TimServo();
 
+extern SPI_HandleTypeDef hspi1;
+extern TIM_HandleTypeDef htim1;
+extern ADC_HandleTypeDef hadc1;
 
-void start(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler, ADC_HandleTypeDef* _adc)
+
+void start()
 {
-	init(_tim, _timHandler);
-	launch(_tim, _timHandler, _adc);
+	init();
+	launch();
 
 }
 
 
-void init(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler)
+void init()
 {
-	leftAileron.init(_tim, _timHandler, 1, 180);
-	rightAileron.init(_tim, _timHandler, 2, 130);
+	leftAileron.init(TIM1, &htim1, 1, 180);
+	rightAileron.init(TIM1, &htim1, 2, 130);
 }
 
-void launch(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler, ADC_HandleTypeDef* _adc)
+void launch()
 {
 
 
