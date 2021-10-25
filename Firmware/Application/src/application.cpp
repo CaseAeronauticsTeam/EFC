@@ -16,22 +16,35 @@
 static TimServo leftAileron = TimServo();
 static TimServo rightAileron = TimServo();
 
+extern SPI_HandleTypeDef hspi1;
+extern TIM_HandleTypeDef htim1;
+extern ADC_HandleTypeDef hadc1;
 
-void start(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler, ADC_HandleTypeDef* _adc)
+
+void start()
 {
 	init();
-	launch(_tim, _timHandler, _adc);
+	launch();
 
 }
 
 
 void init()
 {
-	leftAileron.init(_tim, _timHandler, 1, 180);
-	rightAileron.init(_tim, _timHandler, 2, 130);
+	leftAileron.init(TIM1, &htim1, 1, 180);
+	rightAileron.init(TIM1, &htim1, 2, 130);
+
+	uint8_t tx_buf = 0;
+	uint16_t rx_buf = 0;
+
+
+	 HAL_GPIO_WritePin(GPIOD, GPIO_PIN_6, GPIO_PIN_RESET);
+	 HAL_SPI_Transmit(&hspi1, (uint8_t *)&tx_buf, 1, 100);
+	 HAL_SPI_Receive(&hspi1, (uint8_t *)&rx_buf, 2, 100);
+	 HAL_GPIO_WritePin(GPIOD, GPIO_PIN_6, GPIO_PIN_SET);
 }
 
-void launch(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler, ADC_HandleTypeDef* _adc)
+void launch()
 {
 
 	double thetaL = 0;
@@ -41,9 +54,9 @@ void launch(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler, ADC_HandleTypeDef
 
 	while (1)
 	{
-		HAL_ADC_Start(_adc);
-		HAL_ADC_PollForConversion(_adc, HAL_MAX_DELAY);
-		raw = HAL_ADC_GetValue(_adc);
+		HAL_ADC_Start(&hadc1);
+		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+		raw = HAL_ADC_GetValue(&hadc1);
 
 		if (!HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
 		{
@@ -52,7 +65,7 @@ void launch(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler, ADC_HandleTypeDef
 			leftAileron.setAngle(thetaL);
 
 			// Cycle Right Aileron Servo slowly
-			thetaR = thetaR < 80 ? (thetaR + .0002) : -90;
+			thetaR = thetaR < 90 ? (thetaR + .0002) : -90;
 			rightAileron.setAngle(thetaR);
 		}
 		else  // "Kill"

@@ -1,5 +1,5 @@
 /**
-* @file application.cpp
+* @file application.hpp
 * @author Mitchel Walker
 * @date 9/3/2021
 *
@@ -17,11 +17,11 @@ extern "C" {
 #include <stm32f7xx.h>
 
 
-void start(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler, ADC_HandleTypeDef* _adc);
+void start();
 
 void init();
 
-void launch(TIM_TypeDef* _tim, TIM_HandleTypeDef* _timHandler, ADC_HandleTypeDef* _adc);
+void launch();
 
 
 #ifdef __cplusplus
